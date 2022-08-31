@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.col {
+    margin-bottom: 20px;
+}
+
+.point {
+    cursor: pointer;
+}
+
+.row {
+    margin-top: 90px;
+}
+
+.ingredient-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
