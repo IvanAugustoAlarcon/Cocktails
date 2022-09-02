@@ -185,39 +185,15 @@ const showModal = (name,ingredientArray,measureArray,instructions) => {
   if(modalWrap !== null){
     modalWrap.remove()
   }
-  
-    i1= ingredientArray[0] == undefined ? '' : ingredientArray[0]
-    i2= ingredientArray[1] == undefined ? '' : ingredientArray[1]
-    i3= ingredientArray[2] == undefined ? '' : ingredientArray[2] 
-    i4= ingredientArray[3] == undefined ? '' : ingredientArray[3] 
-    i5= ingredientArray[4] == undefined ? '' : ingredientArray[4]
-    i6= ingredientArray[5] == undefined ? '' : ingredientArray[5]
-    i7= ingredientArray[6] == undefined ? '' : ingredientArray[6]
-    i8= ingredientArray[7] == undefined ? '' : ingredientArray[7]
-    i9= ingredientArray[8] == undefined ? '' : ingredientArray[8]
-    i10= ingredientArray[9] == undefined ? '' : ingredientArray[9]
-    i11= ingredientArray[10] == undefined ? '' : ingredientArray[10] 
-    i12= ingredientArray[11] == undefined ? '' : ingredientArray[11]
-    i13= ingredientArray[12] == undefined ? '' : ingredientArray[12]
-    i14= ingredientArray[13] == undefined ? '' : ingredientArray[13]
-    i15= ingredientArray[14] == undefined ? '' : ingredientArray[14]
+    let ingredients = {}
+    for(let i = 0; i<15; i++){
+      ingredients['i' + i] =  ingredientArray[i] == undefined ? '' : ingredientArray[i]
+    }
 
-    m1= measureArray[0] == undefined ? '' : measureArray[0]
-    m2= measureArray[1] == undefined ? '' : measureArray[1]
-    m3= measureArray[2] == undefined ? '' : measureArray[2] 
-    m4= measureArray[3] == undefined ? '' : measureArray[3] 
-    m5= measureArray[4] == undefined ? '' : measureArray[4]
-    m6= measureArray[5] == undefined ? '' : measureArray[5]
-    m7= measureArray[6] == undefined ? '' : measureArray[6]
-    m8= measureArray[7] == undefined ? '' : measureArray[7]
-    m9= measureArray[8] == undefined ? '' : measureArray[8]
-    m10= measureArray[9] == undefined ? '' : measureArray[9]
-    m11= measureArray[10] == undefined ? '' : measureArray[10] 
-    m12= measureArray[11] == undefined ? '' : measureArray[11]
-    m13= measureArray[12] == undefined ? '' : measureArray[12]
-    m14= measureArray[13] == undefined ? '' : measureArray[13]
-    m15= measureArray[14] == undefined ? '' : measureArray[14]
-  
+    let measures = {}
+    for(let i = 0; i<15; i++){
+      measures['m' + i] =  measureArray[i] == undefined ? '' : measureArray[i]
+    } 
 
   modalWrap = document.createElement('div')
   modalWrap.innerHTML =`
@@ -240,64 +216,64 @@ const showModal = (name,ingredientArray,measureArray,instructions) => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">${i1}</th>
-                <td>${m1}</td>
+                <th scope="row">${ingredients.i0}</th>
+                <td>${measures.m0}</td>
               </tr>
               <tr>
-                <th scope="row">${i2}</th>
-                <td>${m2}</td>
+                <th scope="row">${ingredients.i1}</th>
+                <td>${measures.m1}</td>
               </tr>
               <tr>
-                <th scope="row">${i3}</th>
-                <td>${m3}</td>
+                <th scope="row">${ingredients.i2}</th>
+                <td>${measures.m2}</td>
               </tr>
               <tr>
-                <th scope="row">${i4}</th>
-                <td>${m4}</td>
+                <th scope="row">${ingredients.i3}</th>
+                <td>${measures.m3}</td>
               </tr>
               <tr>
-                <th scope="row">${i5}</th>
-                <td>${m5}</td>
+                <th scope="row">${ingredients.i4}</th>
+                <td>${measures.m4}</td>
               </tr>
               <tr>
-                <th scope="row">${i6}</th>
-                <td>${m6}</td>
+                <th scope="row">${ingredients.i5}</th>
+                <td>${measures.m5}</td>
               </tr>
               <tr>
-                <th scope="row">${i7}</th>
-                <td>${m7}</td>
+                <th scope="row">${ingredients.i6}</th>
+                <td>${measures.m6}</td>
               </tr>
               <tr>
-                <th scope="row">${i8}</th>
-                <td>${m8}</td>
+                <th scope="row">${ingredients.i7}</th>
+                <td>${measures.m7}</td>
               </tr>
               <tr>
-                <th scope="row">${i9}</th>
-                <td>${m9}</td>
+                <th scope="row">${ingredients.i8}</th>
+                <td>${measures.m8}</td>
               </tr>
               <tr>
-                <th scope="row">${i10}</th>
-                <td>${m10}</td>
+                <th scope="row">${ingredients.i9}</th>
+                <td>${measures.m9}</td>
               </tr>
               <tr>
-                <th scope="row">${i11}</th>
-                <td>${m11}</td>
+                <th scope="row">${ingredients.i10}</th>
+                <td>${measures.m10}</td>
               </tr>
               <tr>
-                <th scope="row">${i12}</th>
-                <td>${m12}</td>
+                <th scope="row">${ingredients.i11}</th>
+                <td>${measures.m11}</td>
               </tr>
               <tr>
-                <th scope="row">${i13}</th>
-                <td>${m13}</td>
+                <th scope="row">${ingredients.i12}</th>
+                <td>${measures.m12}</td>
               </tr>
               <tr>
-                <th scope="row">${i14}</th>
-                <td>${m14}</td>
+                <th scope="row">${ingredients.i13}</th>
+                <td>${measures.m13}</td>
               </tr>
               <tr>
-                <th scope="row">${i15}</th>
-                <td>${m15}</td>
+                <th scope="row">${ingredients.i14}</th>
+                <td>${measures.m14}</td>
               </tr>
             <tbody>
           </table>
